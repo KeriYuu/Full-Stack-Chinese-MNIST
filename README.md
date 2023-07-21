@@ -32,9 +32,9 @@ The delivery of the model to the front-end and backend systems is covered in `de
 
 1. **Checkpoint conversion**: The saved model from wandb is converted into a TorchScript for better compatibility and efficiency.
 
-2. **Frontend build**: The TorchScript model is then integrated into the frontend system where it can be accessed either locally or from another machine.
+2. **Frontend build**: The deep learning model is integrated into the frontend system using Gradio. This allows the model to be accessed either locally or from another machine, providing a user-friendly interface for model interaction.
 
-3. **Backend build**: The backend system is set up and the model is deployed using Docker. This backend system communicates with the front-end to serve predictions.
+3. **Backend build**: The backend system is set up using AWS Lambda, which serve predictions only when a request hits. The model and its associated application are containerized and managed using Docker, ensuring a smooth migration and deployment process.
 
 ## References
 
